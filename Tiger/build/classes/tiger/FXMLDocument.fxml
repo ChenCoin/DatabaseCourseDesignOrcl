@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="root" minHeight="600.0" minWidth="800.0" stylesheets="@../CSS/skin.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tiger.FXMLDocumentController">
+    <children>
+      <AnchorPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="title" prefHeight="48.0" text="学生成绩管理系统" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <padding>
+                  <Insets bottom="8.0" left="16.0" top="8.0" />
+               </padding>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="gradepage" text="成绩管理" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="studentpage" text="学生信息" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin></Label>
+                  <Label fx:id="teacherpage" text="教师信息" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="coursepage" text="课程信息" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="infopage" text="更多说明" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="10.0" right="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0">
+         <children>
+            <AnchorPane fx:id="tablepage" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="72.0" spacing="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="termtxt" text="学期：">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="term" />
+                        <Label text="条件：">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="condition" />
+                        <AnchorPane prefWidth="180.0">
+                           <children>
+                              <HBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TextField fx:id="textfield2" maxWidth="100.0" prefHeight="32.0" />
+                                    <Label text=" - " />
+                                    <TextField fx:id="textfield3" maxWidth="100.0" prefHeight="32.0" />
+                                 </children>
+                              </HBox>
+                              <TextField fx:id="textfield1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                           </HBox.margin>
+                        </AnchorPane>
+                        <Button fx:id="searchbtn" mnemonicParsing="false" text="查询">
+                           <HBox.margin>
+                              <Insets left="4.0" right="32.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="addbtn" mnemonicParsing="false" text="添加">
+                           <HBox.margin>
+                              <Insets left="4.0" right="4.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="motifybtn" disable="true" mnemonicParsing="false" text="修改">
+                           <HBox.margin>
+                              <Insets left="4.0" right="4.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="deletebtn" disable="true" mnemonicParsing="false" text="删除">
+                           <HBox.margin>
+                              <Insets left="4.0" right="4.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="16.0" top="16.0" />
+                     </padding>
+                  </HBox>
+                  <Label fx:id="tip" alignment="CENTER" textFill="#d05050" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="84.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TableView id="grade_table" visible="false" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <HBox fx:id="morepage" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox fx:id="contentpage" alignment="TOP_CENTER" prefWidth="400.0">
+                     <children>
+                        <Label text="关于本程序">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label text="    这个程序是一个小小小数据库系统，用来管理教学信息。具体信息内容为学生信息（学号，姓名，年龄，性别，班级）、教师信息（教师号，教师姓名，年龄，性别）、课程信息（课程号，教师号，课程名，学分）以及学生成绩。" wrapText="true">
+                           <VBox.margin>
+                              <Insets top="8.0" />
+                           </VBox.margin></Label>
+                        <Label text="操作说明">
+                           <VBox.margin>
+                              <Insets top="8.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label text="    修改和删除按钮只有在表格中选定一行数据之后，才可以点击。修改数据时，有一些选项是不能修改，如果真的要修改这些选项，应该先删除再添加，而不是修改。" wrapText="true">
+                           <VBox.margin>
+                              <Insets top="4.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="32.0" left="32.0" right="32.0" top="32.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="32.0" top="32.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <HBox fx:id="alert" alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: rgba(0, 0, 0, 0.2);" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="320.0" prefWidth="450.0" style="-fx-background-color: #FFFFFF;" styleClass="confirm">
+               <children>
+                  <Label fx:id="alerttitle" alignment="CENTER" prefHeight="54.0" prefWidth="450.0" style="-fx-background-color: #F0F0F0;" styleClass="actiontitle" text="确认">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="alertcontent" alignment="TOP_LEFT" prefHeight="225.0" prefWidth="450.0" text="将删除数据XXX" wrapText="true">
+                     <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                     </padding>
+                  </Label>
+                  <HBox>
+                     <children>
+                        <Button fx:id="alertcancel" mnemonicParsing="false" text="取消">
+                           <HBox.margin>
+                              <Insets left="8.0" right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="alertconfirm" mnemonicParsing="false" text="确认">
+                           <HBox.margin>
+                              <Insets left="8.0" right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox fx:id="gradeaction" alignment="CENTER" fillHeight="false" layoutX="10.0" layoutY="10.0" style="-fx-background-color: rgba(0, 0, 0, 0.2);" styleClass="confirm" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="320.0" prefWidth="450.0" style="-fx-background-color: #EBEDF4;">
+               <children>
+                  <Label fx:id="gradeactiontitle" alignment="CENTER" prefHeight="54.0" prefWidth="450.0" styleClass="actiontitle" text="标题">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" fillHeight="false">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="姓名：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="gradeactionname" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="科目：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="gradeactioncourse" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="学期：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="gradeactionterm" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="成绩：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="gradeactiongrade" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Button fx:id="gradeactioncancel" mnemonicParsing="false" text="取消">
+                           <HBox.margin>
+                              <Insets left="8.0" right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="gradeactionconfirm" mnemonicParsing="false" text="确认">
+                           <HBox.margin>
+                              <Insets left="8.0" right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="16.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox fx:id="studentaction" alignment="CENTER" fillHeight="false" layoutX="20.0" layoutY="20.0" style="-fx-background-color: rgba(0, 0, 0, 0.2);" styleClass="confirm" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="360.0" prefWidth="450.0" style="-fx-background-color: #EBEDF4;">
+               <children>
+                  <Label fx:id="studentactiontitle" alignment="CENTER" prefHeight="54.0" prefWidth="450.0" styleClass="actiontitle" text="标题">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" fillHeight="false">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="姓名：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="studentactionname" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="学号：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="studentactionid" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="年龄：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="studentactionage" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="性别：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="studentactionsex" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="班级：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="studentactionclass" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Button fx:id="studentactioncancel" mnemonicParsing="false" text="取消">
+                           <HBox.margin>
+                              <Insets left="8.0" right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="studentactionconfirm" mnemonicParsing="false" text="确认">
+                           <HBox.margin>
+                              <Insets left="8.0" right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="16.0" top="8.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox fx:id="teacheraction" alignment="CENTER" fillHeight="false" layoutX="30.0" layoutY="30.0" style="-fx-background-color: rgba(0, 0, 0, 0.2);" styleClass="confirm" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="320.0" prefWidth="450.0" style="-fx-background-color: #EBEDF4;">
+               <children>
+                  <Label fx:id="teacheractiontitle" alignment="CENTER" prefHeight="54.0" prefWidth="450.0" styleClass="actiontitle" text="标题">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" fillHeight="false">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="姓名：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="teacheractionname" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="工号：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="teacheractionid" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="年龄：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="teacheractionage" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="性别：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="teacheractionsex" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Button fx:id="teacheractioncancel" mnemonicParsing="false" text="取消">
+                           <HBox.margin>
+                              <Insets left="8.0" right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="teacheractionconfirm" mnemonicParsing="false" text="确认">
+                           <HBox.margin>
+                              <Insets left="8.0" right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="16.0" top="8.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox fx:id="courseaction" alignment="CENTER" fillHeight="false" layoutX="40.0" layoutY="40.0" style="-fx-background-color: rgba(0, 0, 0, 0.2);" styleClass="confirm" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="360.0" prefWidth="450.0" style="-fx-background-color: #EBEDF4;">
+               <children>
+                  <Label fx:id="courseactiontitle" alignment="CENTER" prefHeight="54.0" prefWidth="450.0" styleClass="actiontitle" text="标题">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" fillHeight="false">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="编号：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="courseactionid" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="名称：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="courseactionname" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="教师：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="courseactionteacher" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="学期：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="courseactionterm" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <Label alignment="TOP_LEFT" text="总分：" wrapText="true">
+                           <padding>
+                              <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="courseactiongrade" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Button fx:id="courseactioncancel" mnemonicParsing="false" text="取消">
+                           <HBox.margin>
+                              <Insets left="8.0" right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="courseactionconfirm" mnemonicParsing="false" text="确认">
+                           <HBox.margin>
+                              <Insets left="8.0" right="8.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="16.0" top="8.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>
